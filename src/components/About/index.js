@@ -3,7 +3,7 @@ import AnimatedLetters from '../AnimatedLetters';
 import './index.scss';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useRef } from "react";
+// import { useRef } from "react";
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate');

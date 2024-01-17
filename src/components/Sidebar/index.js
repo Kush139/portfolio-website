@@ -1,4 +1,4 @@
-import SideNav, {Toggle, NavItem, NavIcon, NavText} from "@trendmicro/react-sidenav"
+import SideNav, { NavItem, NavIcon, NavText} from "@trendmicro/react-sidenav"
 import "@trendmicro/react-sidenav/dist/react-sidenav.css"
 import './index.scss'
 import { useNavigate } from "react-router-dom"
