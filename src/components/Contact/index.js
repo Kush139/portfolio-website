@@ -26,9 +26,8 @@ const Contact = () => {
             />
           </h1>
           <p>
-            I am interested in freelance opportunities - especially on ambitious
-            or large projects. However, if you have any other requests or
-            questions, don't hesitate to contact me using below form either.
+            Right now, I am seeking software development internships for summer 2024. For any inquiries or interest feel free to 
+            fill out the contact form below or contact me directly at k5madan@uwaterloo.ca.
           </p>
           <div className='contact-form'>
             <form>

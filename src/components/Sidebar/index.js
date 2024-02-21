@@ -13,6 +13,7 @@ function Sidebar() {
          
         }}
         className='nav-bar'
+        // sidebar options along with icons and links to respective pages
         >
         <SideNav.Toggle />
         <SideNav.Nav defaultSelected="home">
