@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import './index.scss';
 import AnimatedLetters from '../AnimatedLetters';
 import React, { useEffect, useState } from "react";
+import image from './white_bg.png'
 
 
 
@@ -23,7 +24,7 @@ const Home = () => {
    return (
 
     
-       <div className="container home-page">
+       <div className="container home-page"  style={{ backgroundImage:`url(${image})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" }}> 
            <div className="text-zone">
                <h1>
                 <span className={letterClass}>H</span>

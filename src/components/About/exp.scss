@@ -1,0 +1,17 @@
+.experience-section {
+    /* Example styles for the new page content */
+    padding: 20px;
+    background-color: #f0f0f0; /* Light background for contrast */
+    color: #000; /* Dark text for readability */
+    min-height: 100vh; /* Ensure it takes up at least the full viewport height */
+  }
+
+.exp-header {
+    color: #123456;
+    font-family: 'Helvetica';
+    font-size: 40px; /* Adjust if necessary */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}

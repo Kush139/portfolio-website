@@ -1,6 +1,7 @@
 import './index.scss'
 import AnimatedLetters from '../AnimatedLetters'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -13,6 +14,26 @@ const Contact = () => {
     // Clear the timeout to prevent memory leaks
     return () => clearTimeout(timeoutId);
   }, []);
+
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm('contact_service', 'template_gvz68br', form.current, 'zadDuZHBV7Uk0UFIs')
+      .then(
+        () => {
+          alert('Message successfully sent!')
+          window.location.reload(false)
+        },
+        () => {
+          alert('Failed to send the message, please try again')
+        }
+      )
+  }
+
 
   return (
     <>
@@ -27,16 +48,16 @@ const Contact = () => {
           </h1>
           <p>
             Right now, I am seeking software development internships for summer 2024. For any inquiries or interest feel free to 
-            fill out the contact form below or contact me directly at k5madan@uwaterloo.ca.
+            fill out the contact form below or contact me directly at kushmadan246@gmail.com
           </p>
           <div className='contact-form'>
-            <form>
+          <form ref={form} onSubmit={sendEmail}>
                 <ul>
                     <li className='half'>
-                        <input type="text" name="name" placeholder="Name" required />
+                        <input type="text" name="user_name" placeholder="Name" required />
                     </li>
                     <li className='half'>
-                        <input type="email" name="email" placeholder="email" required />
+                        <input type="email" name="user_email" placeholder="email" required />
                     </li>
                     <li>
                         <input placeholder="Subject" type="text" name="subject" required />
